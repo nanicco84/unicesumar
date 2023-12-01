@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta NAME="author" content="CodePro" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link id="theme" rel="stylesheet" href="./assets/css/theme-light.css">
+    <link id="menu" rel="stylesheet" href="./assets/css/menu-dark.css">
+    <link id="revenda" rel="stylesheet">
+    <link rel='stylesheet' href='./assets/css/main.css' />
+    <link rel='stylesheet' href='./assets/css/login.css' />
+    <link rel='stylesheet' href='./assets/css/menu.css' />
+    <link rel='stylesheet' href='./assets/css/up.css' />
+    <link rel='stylesheet' href='./assets/css/top.css' />
+    <link rel='stylesheet' href='./assets/css/get.css' />
+    <link rel='stylesheet' href='./assets/css/set.css' />
+    <link rel='stylesheet' href='./assets/css/alert.css' />
+    <link rel='stylesheet' href='./assets/css/box.css' />
+    <link rel="stylesheet" href="./assets/css/date.css">
+    <link rel="stylesheet" href="./assets/css/dashboard.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="shortcut icon" href="" />
+    <title></title>
+</head>
+<body>
+    <header>
+        <section class="menu">
+            <div class="menu__logo"></div>
+            <div class="menu__list"></div>
+            <div class="menu__footer"></div>
+            <div class="menu__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/></svg></div>
+        </section>
+        <section class="mobile">
+            <div class="menu__list"></div>
+            
+        </section>
+        <section class="up">
+            <div class="up__logo" onclick="get(['Dashboard'])"></div>
+            <div class="up__title">Dashboard</div>
+            <div class="up__left">
+                <div class="up__item menubar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></div>
+                <div class="up__search">
+                    <input type="text" id="searchall" placeholder="Buscar em tudo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg>
+                </div>
+            </div>
+            <div class="up__account"></div>
+            <div class="up__right">
+                <div class="up__user">
+                    <div class="up__icon"></div>
+                    <div class="up__name"></div>
+                </div>
+            </div>
+        </section>
+        <section class="background">
+            <div class='loading'>
+                <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 25 25' enable-background='new 0 0 0 0' xml:space='preserve'><rect x='0' y='0' width='5' height='10' fill='#fff'><animateTransform attributeType='xml' attributeName='transform' type='translate' values='0 0; 0 15; 0 0' begin='0' dur='0.6s' repeatCount='indefinite' /></rect><rect x='10' y='0' width='5' height='10' fill='#fff'><animateTransform attributeType='xml' attributeName='transform' type='translate' values='0 0; 0 15; 0 0' begin='0.2s' dur='0.6s' repeatCount='indefinite' /></rect><rect x='20' y='0' width='5' height='10' fill='#fff'><animateTransform attributeType='xml' attributeName='transform' type='translate' values='0 0; 0 15; 0 0' begin='0.4s' dur='0.6s' repeatCount='indefinite' /></rect></svg>
+            </div>
+        </section>
+        <section class="alert"></section>
+        <section class="box">
+            <div class="box__main"></div>
+            <div class="box__background"></div>
+            <div class='loading'>
+                <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 25 25' enable-background='new 0 0 0 0' xml:space='preserve'><rect x='0' y='0' width='5' height='10' fill='#fff'><animateTransform attributeType='xml' attributeName='transform' type='translate' values='0 0; 0 15; 0 0' begin='0' dur='0.6s' repeatCount='indefinite' /></rect><rect x='10' y='0' width='5' height='10' fill='#fff'><animateTransform attributeType='xml' attributeName='transform' type='translate' values='0 0; 0 15; 0 0' begin='0.2s' dur='0.6s' repeatCount='indefinite' /></rect><rect x='20' y='0' width='5' height='10' fill='#fff'><animateTransform attributeType='xml' attributeName='transform' type='translate' values='0 0; 0 15; 0 0' begin='0.4s' dur='0.6s' repeatCount='indefinite' /></rect></svg>
+            </div>
+            <div class="box__alert"></div>
+        </section>
+    </header>
+    <main>
+        <div class="main"></div>
+        <div class="main__background">
+            <div class='loading'>
+                <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 25 25' enable-background='new 0 0 0 0' xml:space='preserve'><rect x='0' y='0' width='5' height='10' fill='#fff'><animateTransform attributeType='xml' attributeName='transform' type='translate' values='0 0; 0 15; 0 0' begin='0' dur='0.6s' repeatCount='indefinite' /></rect><rect x='10' y='0' width='5' height='10' fill='#fff'><animateTransform attributeType='xml' attributeName='transform' type='translate' values='0 0; 0 15; 0 0' begin='0.2s' dur='0.6s' repeatCount='indefinite' /></rect><rect x='20' y='0' width='5' height='10' fill='#fff'><animateTransform attributeType='xml' attributeName='transform' type='translate' values='0 0; 0 15; 0 0' begin='0.4s' dur='0.6s' repeatCount='indefinite' /></rect></svg>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer__background"></div>
+        <div class="footer__logo"></div>
+        <div class='loading'>
+            <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 25 25' enable-background='new 0 0 0 0' xml:space='preserve'><rect x='0' y='0' width='5' height='10' fill='#fff'><animateTransform attributeType='xml' attributeName='transform' type='translate' values='0 0; 0 15; 0 0' begin='0' dur='0.6s' repeatCount='indefinite' /></rect><rect x='10' y='0' width='5' height='10' fill='#fff'><animateTransform attributeType='xml' attributeName='transform' type='translate' values='0 0; 0 15; 0 0' begin='0.2s' dur='0.6s' repeatCount='indefinite' /></rect><rect x='20' y='0' width='5' height='10' fill='#fff'><animateTransform attributeType='xml' attributeName='transform' type='translate' values='0 0; 0 15; 0 0' begin='0.4s' dur='0.6s' repeatCount='indefinite' /></rect></svg>
+        </div>
+        <div class="footer__message"></div>
+    </footer>
+    <script src="./assets/js/libs/jquery.js"></script>
+    <script src="./assets/js/libs/cookie.js"></script>
+    <script src="./assets/js/auth.js"></script>
+    <script src="./assets/js/init.js"></script>
+    <script src="./assets/js/get.js"></script>
+    <script src="./assets/js/set.js"></script>
+    <script src="./assets/js/database.js"></script>
+    <script src="./assets/js/file.js"></script>
+    <script src="./assets/js/box.js"></script>
+    <script src="./assets/js/alert.js"></script>
+    <script src="./config/config.js"></script>
+    <script src="./assets/js/libs/mask.js"></script>
+    <script src="./assets/js/libs/money.js"></script>
+    <script src="./assets/js/libs/moment.js"></script>
+    <script src="./assets/js/libs/date.js"></script>
+    <script src="//code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>

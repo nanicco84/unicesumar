@@ -1,0 +1,13 @@
+:root{
+    --menu-background:#37404A;
+    --menu-color:#8391a2;
+    --menu-hover:#bccee4;
+    --menu-active:white;
+    --menu-scroll:#6A737E;
+    --menu-footer:#21262E;
+    --menu-scroll-bar:#37404A;
+    --menu-alert-color:white;
+    --menu-alert-background:red;
+    --menu-bar:var(--color);
+    --logo-filter:none;
+}

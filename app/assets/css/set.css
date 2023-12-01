@@ -1,0 +1,1218 @@
+@media (orientation: landscape) {
+    
+    .tab{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0.5vh;
+        padding-bottom: 0;
+    }
+
+    .tab__item{
+        background-color: var(--background);
+        padding: 1.5vh;
+        border-radius: 1vh 1vh 0 0;
+        margin: 0.5vh;
+        font-size: 80%;
+        color: var(--font2);
+        opacity: 0.5;
+        margin-bottom: 0;
+        border-bottom: 2px solid var(--background2);
+    }
+
+    .tab__item:hover{
+        cursor: pointer;
+        color: var(--font);
+        opacity: 1;
+    }
+
+    .tab__item.active{
+        color: var(--font);
+        opacity: 1;
+        border-bottom: 2px solid var(--background);
+    }
+
+    .group{
+        display: none;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+        background-color: var(--background);
+        padding: 0.75vh;
+        border-radius: 0 1vh 1vh 1vh;
+        margin: 1vh;
+        margin-top: 0;
+    }
+
+    .group.active{
+        display: flex;
+    }
+
+    .subgroup{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-bottom: 1px solid var(--background2);
+        margin-bottom: 0.75vh;
+        padding-bottom: 0.75vh;
+        flex-wrap: wrap;
+    }
+
+    .subgroup__form{
+        width: calc(100% - 8vh);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .subgroup__options{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 8vh;
+    }
+
+    .subgroup__options button:nth-child(1){
+        width: 3vh;
+        height: 3vh;
+        border: none;
+        border-radius: 1vh;
+        margin: 0.75vh 0.25vh 0vh 0.75vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--background2);
+        position: relative;
+        z-index: 1;
+    }
+
+    .subgroup__options button:nth-child(2){
+        width: 3vh;
+        height: 3vh;
+        border: none;
+        border-radius: 1vh;
+        margin: 0.75vh 0.75vh 0vh 0.25vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--background2);
+        position: relative;
+        z-index: 1;
+    }
+
+    .subgroup__options button:last-child{
+        width: 8vh;
+        height: 3vh;
+        border: none;
+        border-radius: 1vh;
+        margin: 0.75vh 0.75vh 0.75vh 0.75vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--background2);
+        position: relative;
+    }
+
+    .subgroup__options button svg{
+        fill: var(--font2);
+        width: 1.5vh;
+        height: 1.5vh;
+    }
+
+    .subgroup__options button:hover{
+        background-color: var(--font2);
+        cursor: pointer;
+    }
+
+    .subgroup__options button:hover svg{
+        fill: var(--background);
+    }
+
+    .subgroup__options button.none{
+        background-color: var(--background);
+        cursor: default;
+    }
+
+    .subgroup__options button:hover .tip{
+        display: block;
+    }
+
+    .group__button label, .group__button button{
+        height: 3vh;
+        border: none;
+        border-radius: 1vh;
+        margin: 0.75vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--background2);
+        padding: 0 1.5vh;
+        color: var(--font2);
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 80%;
+    }
+
+    .group__button label svg, .group__button button svg{
+        fill: var(--font2);
+        width: 1.5vh;
+        height: 1.5vh;
+        margin-right: 0.5vh;
+    }
+
+    .group__button label:hover, .group__button button:hover{
+        background-color: var(--font2);
+        cursor: pointer;
+        color: var(--background);
+    }
+
+    .group__button label:hover svg, .group__button button:hover svg{
+        fill: var(--background);
+    }
+
+    .item{
+        padding: 0.75vh;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .item__name{
+        font-size: 80%;
+        height: 1.2vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .item__name svg{
+        height: 1.2vh;
+        margin-left: 0.5vh;
+        fill: red;
+    }
+
+    .item__name p:nth-child(1){
+        color: var(--color);
+        font-weight: 700;
+    }
+
+    .item__name p:nth-child(2){
+        text-align: right;
+        color: var(--font2);
+        font-size: 80%;
+    }
+
+    .item__input{
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .item__input input, .item__input textarea, .item__input select{
+        width: 100%;
+        padding: 0 1vh;
+        box-sizing: border-box;
+        border-radius: 1vh;
+        background-color: var(--background);
+        margin-top: 0.75vh;
+        font-size: 100%;
+        border: 1px solid var(--background2);
+        color: var(--font);
+        outline: none;
+        font-family: 'Nunito', sans-serif;
+        height: 5vh;
+    }
+
+    .item__input select{
+        height: calc(inherit - 2px);
+    }
+
+    .item__input input[disabled], .item__input textarea[disabled], .item__input select[disabled]{
+        background-color: var(--background3);
+    }
+
+    .item__input input::-webkit-input-placeholder, .item__input textarea::-webkit-input-placeholder{
+        color: var(--font2);
+        font-size: 80%;
+        text-transform: none;
+    }
+    
+    .item__input input:-ms-input-placeholder, .item__input textarea:-ms-input-placeholder{
+        color: var(--font2);
+        font-size: 80%;
+        text-transform: none;
+    }
+    
+    .item__input input::placeholder, .item__input textarea::placeholder{
+        color: var(--font2);
+        font-size: 80%;
+        text-transform: none;
+    }
+
+    .item__input textarea{
+        resize: none;
+        overflow: hidden;
+        min-height: 10vh;
+        padding: 1vh;
+    }
+
+    .item__input input[type="list"]{
+        cursor: pointer;
+    }
+
+    input[type="list"]:disabled{
+        opacity: 1;
+        cursor: default;
+    }
+
+    select:disabled {
+        opacity: 1;
+        cursor: default;
+    }
+
+    .item__input span{
+        height: calc(5vh - 2px);
+        line-height: calc(5vh - 2px);
+        padding: 0 1vh;
+        border-radius: 1vh 0 0 1vh;
+        background-color: var(--background2);
+        margin-top: 0.75vh;
+        font-size: 80%;
+        border: 1px solid var(--background2);
+        color: var(--font2);
+    }
+
+    .item__input span.item__prev{
+        border-radius: 1vh 0 0 1vh;
+    }
+
+    .item__input span.item__next{
+        border-radius: 0 1vh 1vh 0;
+    }
+
+    .item__input input.item__prev{
+        border-radius: 0 1vh 1vh 0;
+    }
+
+    .item__input input.item__next{
+        border-radius: 1vh 0 0 1vh;
+    }
+
+    .item__input button.item__button{
+        height: 4.7vh;
+        line-height: 4.4vh;
+        padding: 0 2vh;
+        border-radius: 0 1vh 1vh 0;
+        background-color: var(--font);
+        margin-top: 0.75vh;
+        font-size: 80%;
+        border: 1px solid var(--font);
+        color: var(--background);
+        width: unset;
+    }
+
+    .item__color{
+        width: 4vh;
+        height: 5vh;
+        border-radius: 1vh 0 0 1vh;
+        border: 1px solid var(--background2);
+        position: absolute;
+        top: 0.75vh;
+        left: 0;
+        box-sizing: border-box;
+    }
+
+    .item__image{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .item__image__div{
+        margin-top: 0.75vh;
+        box-sizing: border-box;
+        border-radius: 1vh;
+        background-color: var(--background2);
+        width: 10vh;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid var(--background2);
+    }
+
+    .item__image__div:nth-child(10n){
+        margin-right: 0vh;
+    }
+
+    .item__image__img{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 3vh;
+        color: var(--font2);
+    }
+
+    .item__image__img svg{
+        height: 3vh;
+        width: 4vh;
+        margin-right: 0.3vh;
+        fill: var(--font2);
+    }
+
+    .item__image__div .item__image__img:nth-child(1) img{
+        height: inherit;
+        overflow: hidden;
+        object-fit: cover;
+        width: 100%;
+        opacity: 0.8;
+        filter: blur(5px);
+        transform: scale(1.1);
+    }
+
+    .item__image__div .item__image__img:nth-child(2) img{
+        height: 100%;
+        transform: scale(1);
+        transition: all 0.5s ease;
+        overflow: hidden;
+        object-fit: contain;
+        width: 100%;
+        z-index: 1;
+
+    }
+
+    .item__image__div.move{
+        cursor: grab;
+    }
+
+    .item__image__div .none{
+        display: none;
+    }
+
+    .item__image__div.addimages{
+        cursor: pointer;
+    }
+
+    .item__image__div.addimages:hover svg{
+        fill: var(--color);
+    }
+
+    .item__image__edt{
+        background-color: royalblue;
+        width: 2.5vh;
+        height: 2.5vh;
+        cursor: pointer;
+        border-radius: 1vh 0 0 0;
+        position: relative;
+        border-top: 2px solid var(--background);
+        border-left: 2px solid var(--background);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item__image__edt:hover{
+        background-color: var(--background2);
+    }
+
+    .item__image__edt svg{
+        width: 1.5vh;
+        height: 1.5vh;
+        display: block;
+        fill: white;
+    }
+
+    .item__image__edt:hover svg{
+        fill: royalblue;
+    }
+
+    .item__image__edt:hover .tip{
+        display: block;
+    }
+
+    .item__image__del{
+        background-color: red;
+        width: 2.5vh;
+        height: 2.5vh;
+        cursor: pointer;
+        border-radius: 0 0 1vh 0;
+        position: relative;
+        border-top: 2px solid var(--background);
+        border-left: 2px solid var(--background);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item__image__del:hover{
+        background-color: var(--background2);
+    }
+
+    .item__image__del svg{
+        width: 1.5vh;
+        height: 1.5vh;
+        display: block;
+        fill: white;
+    }
+
+    .item__image__del:hover svg{
+        fill: red;
+    }
+
+    .item__image__del:hover .tip{
+        display: block;
+    }
+
+    .item__image__info{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        z-index: 1;
+    }
+
+    .item__image__rank{
+        position: absolute;
+        top: 0.5vh;
+        left: 0.5vh;
+        background-color: var(--background);
+        z-index: 1;
+        font-size: 60%;
+        padding: 0.5vh;
+        border-radius: 1vh;
+        font-weight: bold;
+    }
+
+    .button{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        margin: 0.25vh 1vh 1vh 1vh;
+    }
+
+    .button button.green{
+        background-color: limegreen;
+        color: white;
+        padding: 1vh 1.5vh;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        border-radius: 1vh;
+        margin-left: 1vh;
+        font-size: 80%;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button button.green:hover{
+        background-color: var(--background);
+        color: limegreen;
+        cursor: pointer;
+    }
+
+    .button button.red{
+        background-color: red;
+        color: white;
+        padding: 1vh 1.5vh;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        border-radius: 1vh;
+        margin-left: 1vh;
+        font-size: 80%;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button button.red:hover{
+        background-color: var(--background);
+        color: red;
+        cursor: pointer;
+    }
+
+    .button button.yellow{
+        background-color: darkorange;
+        color: white;
+        padding: 1vh 1.5vh;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        border-radius: 1vh;
+        margin-left: 1vh;
+        font-size: 80%;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button button.yellow:hover{
+        background-color: var(--background);
+        color: darkorange;
+        cursor: pointer;
+    }
+
+    .button button svg{
+        height: 1.6vh;
+        margin-right: 1vh;
+        display: block;
+        fill: white;
+    }
+
+    .button button.green:hover svg{
+        fill: limegreen;
+    }
+
+    .button button.red:hover svg{
+        fill: red;
+    }
+
+    .button button.yellow:hover svg{
+        fill: darkorange;
+    }
+
+    .ui-state-highlight { height: 11.5vh; width: 11.5vh; margin: 0.75vh 0vh 0vh 0vh; box-sizing: border-box; border-radius: 1vh; background: var(--background2) !important; border: 1px solid var(--background2) !important;}
+
+}
+
+@media (orientation: portrait) {
+
+    .tab{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 0;
+        overflow-x: auto;
+    }
+
+    .tab__item{
+        background-color: var(--background);
+        padding: 1.5vh;
+        border-radius: 1vh 1vh 0 0;
+        margin-right: 0.5vh;
+        font-size: 80%;
+        color: var(--font2);
+        opacity: 0.5;
+        margin-bottom: 0;
+        border-bottom: 2px solid var(--background2);
+    }
+
+    .tab__item:hover{
+        cursor: pointer;
+        color: var(--font);
+        opacity: 1;
+    }
+
+    .tab__item.active{
+        color: var(--font);
+        opacity: 1;
+        border-bottom: 2px solid var(--background);
+    }
+
+    .group{
+        display: none;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+        background-color: var(--background);
+        padding: 0.75vh;
+        border-radius: 0 1vh 1vh 1vh;
+        margin-top: 0;
+        box-sizing: border-box;
+    }
+
+    .group.active{
+        display: flex;
+    }
+
+    .subgroup{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-bottom: 1px solid var(--background2);
+        margin-bottom: 0.75vh;
+        padding-bottom: 0.75vh;
+        flex-wrap: wrap;
+    }
+
+    .subgroup__form{
+        width: calc(100% - 8vh);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .subgroup__options{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 8vh;
+    }
+
+    .subgroup__options button:nth-child(1){
+        width: 3vh;
+        height: 3vh;
+        border: none;
+        border-radius: 1vh;
+        margin: 0.75vh 0.25vh 0vh 0.75vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--background2);
+        position: relative;
+        z-index: 1;
+    }
+
+    .subgroup__options button:nth-child(2){
+        width: 3vh;
+        height: 3vh;
+        border: none;
+        border-radius: 1vh;
+        margin: 0.75vh 0.75vh 0vh 0.25vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--background2);
+        position: relative;
+        z-index: 1;
+    }
+
+    .subgroup__options button:last-child{
+        width: 8vh;
+        height: 3vh;
+        border: none;
+        border-radius: 1vh;
+        margin: 0.75vh 0.75vh 0.75vh 0.75vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--background2);
+        position: relative;
+    }
+
+    .subgroup__options button svg{
+        fill: var(--font2);
+        width: 1.5vh;
+        height: 1.5vh;
+    }
+
+    .subgroup__options button:hover{
+        background-color: var(--font2);
+        cursor: pointer;
+    }
+
+    .subgroup__options button:hover svg{
+        fill: var(--background);
+    }
+
+    .subgroup__options button.none{
+        background-color: var(--background);
+        cursor: default;
+    }
+
+    .subgroup__options button:hover .tip{
+        display: block;
+    }
+
+    .group__button label, .group__button button{
+        height: 3vh;
+        border: none;
+        border-radius: 1vh;
+        margin: 0.75vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--background2);
+        padding: 0 1.5vh;
+        color: var(--font2);
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 80%;
+    }
+
+    .group__button label svg, .group__button button svg{
+        fill: var(--font2);
+        width: 1.5vh;
+        height: 1.5vh;
+        margin-right: 0.5vh;
+    }
+
+    .group__button label:hover, .group__button button:hover{
+        background-color: var(--font2);
+        cursor: pointer;
+        color: var(--background);
+    }
+
+    .group__button label:hover svg, .group__button button:hover svg{
+        fill: var(--background);
+    }
+
+    .item{
+        padding: 0.75vh;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .item__name{
+        font-size: 80%;
+        height: 1.2vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .item__name svg{
+        height: 1.2vh;
+        margin-left: 0.5vh;
+        fill: red;
+    }
+
+    .item__name p:nth-child(1){
+        color: var(--color);
+        font-weight: 700;
+    }
+
+    .item__name p:nth-child(2){
+        text-align: right;
+        color: var(--font2);
+        font-size: 80%;
+    }
+
+    .item__input{
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .item__input input, .item__input textarea, .item__input select{
+        width: 100%;
+        padding: 0 1vh;
+        box-sizing: border-box;
+        border-radius: 1vh;
+        background-color: var(--background);
+        margin-top: 0.75vh;
+        font-size: 100%;
+        border: 1px solid var(--background2);
+        color: var(--font);
+        outline: none;
+        font-family: 'Nunito', sans-serif;
+        height: 5vh;
+    }
+
+    .item__input select{
+        height: calc(inherit - 2px);
+    }
+
+    .item__input input[disabled], .item__input textarea[disabled], .item__input select[disabled]{
+        background-color: var(--background3);
+    }
+
+    .item__input input::-webkit-input-placeholder, .item__input textarea::-webkit-input-placeholder{
+        color: var(--font2);
+        font-size: 80%;
+        text-transform: none;
+    }
+    
+    .item__input input:-ms-input-placeholder, .item__input textarea:-ms-input-placeholder{
+        color: var(--font2);
+        font-size: 80%;
+        text-transform: none;
+    }
+    
+    .item__input input::placeholder, .item__input textarea::placeholder{
+        color: var(--font2);
+        font-size: 80%;
+        text-transform: none;
+    }
+
+    .item__input textarea{
+        resize: none;
+        overflow: hidden;
+        min-height: 10vh;
+        padding: 1vh;
+    }
+
+    .item__input input[type="list"]{
+        cursor: pointer;
+    }
+
+    input[type="list"]:disabled{
+        opacity: 1;
+        cursor: default;
+    }
+
+    select:disabled {
+        opacity: 1;
+        cursor: default;
+    }
+
+    .item__input span{
+        height: calc(5vh - 2px);
+        line-height: calc(5vh - 2px);
+        padding: 0 1vh;
+        border-radius: 1vh 0 0 1vh;
+        background-color: var(--background2);
+        margin-top: 0.75vh;
+        font-size: 80%;
+        border: 1px solid var(--background2);
+        color: var(--font2);
+    }
+
+    .item__input span.item__prev{
+        border-radius: 1vh 0 0 1vh;
+    }
+
+    .item__input span.item__next{
+        border-radius: 0 1vh 1vh 0;
+    }
+
+    .item__input input.item__prev{
+        border-radius: 0 1vh 1vh 0;
+    }
+
+    .item__input input.item__next{
+        border-radius: 1vh 0 0 1vh;
+    }
+
+    .item__input button.item__button{
+        height: 4.7vh;
+        line-height: 4.4vh;
+        padding: 0 2vh;
+        border-radius: 0 1vh 1vh 0;
+        background-color: var(--font);
+        margin-top: 0.75vh;
+        font-size: 80%;
+        border: 1px solid var(--font);
+        color: var(--background);
+        width: unset;
+    }
+
+    .item__color{
+        width: 4vh;
+        height: 5vh;
+        border-radius: 1vh 0 0 1vh;
+        border: 1px solid var(--background2);
+        position: absolute;
+        top: 0.75vh;
+        left: 0;
+        box-sizing: border-box;
+    }
+
+    .item__image{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .item__image__div{
+        margin-top: 0.75vh;
+        box-sizing: border-box;
+        border-radius: 1vh;
+        background-color: var(--background2);
+        width: 10vh;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid var(--background2);
+    }
+
+    .item__image__div:nth-child(10n){
+        margin-right: 0vh;
+    }
+
+    .item__image__img{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 3vh;
+        color: var(--font2);
+    }
+
+    .item__image__img svg{
+        height: 3vh;
+        width: 4vh;
+        margin-right: 0.3vh;
+        fill: var(--font2);
+    }
+
+    .item__image__div .item__image__img:nth-child(1) img{
+        height: inherit;
+        overflow: hidden;
+        object-fit: cover;
+        width: 100%;
+        opacity: 0.8;
+        filter: blur(5px);
+        transform: scale(1.1);
+    }
+
+    .item__image__div .item__image__img:nth-child(2) img{
+        height: 100%;
+        transform: scale(1);
+        transition: all 0.5s ease;
+        overflow: hidden;
+        object-fit: contain;
+        width: 100%;
+        z-index: 1;
+
+    }
+
+    .item__image__div.move{
+        cursor: grab;
+    }
+
+    .item__image__div .none{
+        display: none;
+    }
+
+    .item__image__div.addimages{
+        cursor: pointer;
+    }
+
+    .item__image__div.addimages:hover svg{
+        fill: var(--color);
+    }
+
+    .item__image__edt{
+        background-color: royalblue;
+        width: 2.5vh;
+        height: 2.5vh;
+        cursor: pointer;
+        border-radius: 1vh 0 0 0;
+        position: relative;
+        border-top: 2px solid var(--background);
+        border-left: 2px solid var(--background);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item__image__edt:hover{
+        background-color: var(--background2);
+    }
+
+    .item__image__edt svg{
+        width: 1.5vh;
+        height: 1.5vh;
+        display: block;
+        fill: white;
+    }
+
+    .item__image__edt:hover svg{
+        fill: royalblue;
+    }
+
+    .item__image__edt:hover .tip{
+        display: block;
+    }
+
+    .item__image__del{
+        background-color: red;
+        width: 2.5vh;
+        height: 2.5vh;
+        cursor: pointer;
+        border-radius: 0 0 1vh 0;
+        position: relative;
+        border-top: 2px solid var(--background);
+        border-left: 2px solid var(--background);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item__image__del:hover{
+        background-color: var(--background2);
+    }
+
+    .item__image__del svg{
+        width: 1.5vh;
+        height: 1.5vh;
+        display: block;
+        fill: white;
+    }
+
+    .item__image__del:hover svg{
+        fill: red;
+    }
+
+    .item__image__del:hover .tip{
+        display: block;
+    }
+
+    .item__image__info{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        z-index: 1;
+    }
+
+    .item__image__rank{
+        position: absolute;
+        top: 0.5vh;
+        left: 0.5vh;
+        background-color: var(--background);
+        z-index: 1;
+        font-size: 60%;
+        padding: 0.5vh;
+        border-radius: 1vh;
+        font-weight: bold;
+    }
+
+    .button{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .button button{
+        margin-top: 1vh;
+    }
+
+    .button button.green{
+        background-color: limegreen;
+        color: white;
+        padding: 1vh 1.5vh;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        border-radius: 1vh;
+        margin-left: 1vh;
+        font-size: 80%;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button button.green:hover{
+        background-color: var(--background);
+        color: limegreen;
+        cursor: pointer;
+    }
+
+    .button button.red{
+        background-color: red;
+        color: white;
+        padding: 1vh 1.5vh;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        border-radius: 1vh;
+        margin-left: 1vh;
+        font-size: 80%;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button button.red:hover{
+        background-color: var(--background);
+        color: red;
+        cursor: pointer;
+    }
+
+    .button button.yellow{
+        background-color: darkorange;
+        color: white;
+        padding: 1vh 1.5vh;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        border-radius: 1vh;
+        margin-left: 1vh;
+        font-size: 80%;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button button.yellow:hover{
+        background-color: var(--background);
+        color: darkorange;
+        cursor: pointer;
+    }
+
+    .button button svg{
+        height: 1.6vh;
+        margin-right: 1vh;
+        display: block;
+        fill: white;
+    }
+
+    .button button.green:hover svg{
+        fill: limegreen;
+    }
+
+    .button button.red:hover svg{
+        fill: red;
+    }
+
+    .button button.yellow:hover svg{
+        fill: darkorange;
+    }
+
+    .ui-state-highlight { height: 11.5vh; width: 11.5vh; margin: 0.75vh 0vh 0vh 0vh; box-sizing: border-box; border-radius: 1vh; background: var(--background2) !important; border: 1px solid var(--background2) !important;}
+
+    .button .top__return{
+        padding: 1vh 1.5vh;
+        font-size: 80%;
+        margin-right: 0vh;
+        height: unset;
+        width: unset;
+    }
+
+    .tip{
+        display: none;
+    }
+
+}

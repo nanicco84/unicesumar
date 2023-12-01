@@ -1,0 +1,14 @@
+:root{
+    --menu-background:var(--color);
+    --menu-gradient:linear-gradient(0deg, var(--color) 0%, var(--color2) 100%);
+    --menu-color:rgba(255,255,255,0.75);
+    --menu-hover:rgba(255,255,255,0.9);
+    --menu-active:white;
+    --menu-scroll:rgba(255,255,255,0.4);
+    --menu-footer:rgba(0,0,0,0.2); 
+    --menu-scroll-bar:rgba(255,255,255,0);
+    --menu-alert-color:red;
+    --menu-alert-background:white;
+    --menu-bar:white;
+    --logo-filter:brightness(0) invert(1);
+}

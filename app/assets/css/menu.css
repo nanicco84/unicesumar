@@ -1,0 +1,440 @@
+@media (orientation: landscape) {
+    
+    .menu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 280px;
+        background-color: var(--menu-background);
+        background-image: var(--menu-gradient);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-right: 2px solid var(--background2);
+        transition: all 0.5s ease;
+    }
+
+    .menu__logo{
+        background-image: var(--logo);
+        width: 100%;
+        height: 4vh;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin: 2vh 0 2vh 0;
+        filter: var(--logo-filter);
+    }
+
+    .menu__list{
+        width: 100%;
+        height: calc(100% - 15vh);
+        overflow: hidden;
+        padding-bottom: 1vh;
+    }
+
+    .menu__list:hover{
+        overflow: auto;
+    }
+
+    .menu__title{
+        font-size: 70%;
+        font-weight: 900;
+        color: var(--menu-color);
+        text-transform: uppercase;
+        padding: 3vh 2vh 1vh 2vh;
+    }
+
+    .menu__item{
+        padding: 1vh 2vh;
+        font-size: 90%;
+        font-weight: 400;
+        color: var(--menu-color);
+        position: relative;
+    }
+
+    .menu__item:hover{
+        cursor: pointer;
+        color: var(--menu-hover);
+    }
+
+    .menu__list:hover .menu__item{
+        padding-right: calc(2vh - 8px);
+    }
+
+    .menu__bar{
+        position: absolute;
+        top: 0;
+        left: 0.5vh;
+        width: 0.5vh;
+        height: 100%;
+        border-radius: 0.5vh;
+    }
+
+    .menu__bar.active{
+        background-color: var(--menu-bar);
+    }
+
+    .menu__div{
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .menu__item svg{
+        height: 1.5vh;
+        width: 2vh;
+        display: block;
+        transition: all 0.5s all;
+        fill: var(--menu-color);
+    }
+
+    .menu__item:hover svg{
+        fill: var(--menu-hover);
+    }
+
+    .menu__name{
+        margin-left: 1vh;
+    }
+
+    .menu__number{
+        margin-left: 1vh;
+        background-color: var(--menu-color);
+        color: var(--menu-background);
+        border-radius: 2vh;
+        font-size: 60%;
+        padding: 0 0.5vh;
+        height: 1.5vh;
+        line-height: 1.5vh;
+    }
+
+    .menu__item:hover .menu__number{
+        background-color: var(--menu-hover);
+    }
+
+    .menu__arrow{
+        position: absolute;
+        left: 230px;
+        top: 0;
+        transition: all 0.5s ease;
+    }
+
+    .menu__item.active{
+        color: var(--menu-active);
+        fill: var(--menu-active);
+    }
+
+    .menu__item.active .menu__number{
+        background-color: var(--menu-active);
+    }
+
+    .menu__subitem{
+        display: none;
+        position: relative;
+    }
+
+    .menu__subitem .menu__item{
+        font-size: 80%;
+        padding: 0 2vh 1vh 2vh;
+    }
+
+    .menu__subitem .menu__name{
+        margin-left: 3vh;
+    }
+
+    .menu__subitem2{
+        display: none;
+        position: absolute;
+        left: 60px;
+        background-color: var(--menu-background);
+        z-index: 1;
+        margin-top: -42px;
+        padding: 1vh;
+        width: 150px;
+    }
+
+    .menu__subitem2 .menu__bar{
+        display: none;
+    }
+
+    .menu__subitem2 .menu__item{
+        padding: 1vh;
+    }
+
+    .menu__subitem2 .menu__name{
+        margin-left: 0;
+    }
+
+    .mobile{
+        display: none;
+    }
+
+    .menu__footer{
+        background-color: var(--menu-footer);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 1vh;
+        width: 100%;
+        height: 5vh;
+    }
+
+    .menu__footer__item{
+        position: relative;
+        cursor: pointer;
+    }
+
+    .menu__footer__item svg{
+        height: 2vh;
+        margin-top: 0.5vh;
+        fill: var(--menu-color);
+    }
+
+    .menu__footer__item:hover svg{
+        fill: var(--menu-hover);
+    }
+
+    .menu__footer__alert{
+        position: absolute;
+        top: -0.2vh;
+        right: -0.8vh;
+        color: var(--menu-alert-color);
+        background-color: var(--menu-alert-background);
+        text-align: center;
+        height: 1.5vh;
+        border-radius: 100%;
+        font-size: 60%;
+        line-height: 1.5vh;
+        padding: 0 0.5vh;
+        border: 1px solid var(--menu-footer);
+    }
+
+    .menu__close{
+        display: none;
+    }
+
+    .menu__list::-webkit-scrollbar{
+        -webkit-appearance: none;
+    }
+
+    .menu__list::-webkit-scrollbar:vertical{
+        width: 8px;
+    }
+
+    .menu__list::-webkit-scrollbar:horizontal{
+        height: 8px;
+    }
+
+    .menu__list::-webkit-scrollbar-thumb{
+        background-color: var(--menu-scroll);
+        border-radius: 10px;
+        border: 2px solid var(--menu-scroll-bar);
+    }
+
+    .menu__list::-webkit-scrollbar-track{
+        border-radius: 10px;
+        background-color: rgba(255,255,255,0);
+    }
+
+}
+
+@media (orientation: portrait) {
+
+    .menu{
+        position: fixed;
+        top: 100%;
+        z-index: 5;
+        background-color: var(--background);
+        width: 100%;
+        height: calc(100% - 8vh);
+        left: 0;
+        transition: all 0.5s ease;
+    }
+    
+    .menu__logo{
+        background-image: var(--mini);
+        width: 100%;
+        height: 4vh;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left;
+        padding-bottom: 2vh;
+        margin: 2vh 0 1vh 0;
+        border-bottom: 2px solid var(--background2);
+        background-origin: content-box;
+        padding-left: 2vh;
+    }
+    
+    .menu__list{
+        width: 100%;
+        padding: 1vh 0;
+        overflow: auto;
+        height: calc(100% - 11.3vh);
+    }
+    
+    .menu__title{
+        font-size: 80%;
+        font-weight: 900;
+        color: var(--font2);
+        text-transform: uppercase;
+        padding: 3vh 2vh 1vh 2vh;
+    }
+    
+    .menu__div{
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .menu__item{
+        padding: 1vh 2vh;
+        cursor: pointer;
+        font-size: 120%;
+        font-weight: 400;
+        color: var(--font);
+    }
+    
+    .menu__item svg{
+        height: 2vh;
+        width: 2vh;
+        display: block;
+    }
+    
+    .menu__item path{
+        fill: var(--menu-color);
+    }
+    
+    .menu__name{
+        margin-left: 1vh;
+        font-size: 100%;
+    }
+    
+    .menu__arrow{
+        display: none;
+    }
+    
+    .menu__number{
+        margin-left: 1vh;
+        background-color: var(--font2);
+        color: var(--background);
+        border-radius: 2vh;
+        font-size: 50%;
+        padding: 0 0.8vh;
+        height: 2vh;
+        line-height: 2vh;
+    }
+    
+    .menu__item.active{
+        color: var(--color);
+    }
+    
+    .menu__item.active path{
+        fill: var(--color);
+    }
+    
+    .menu__item.active .menu__number{
+        background-color: var(--color);
+    }
+    
+    .mobile{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--menu-background);
+        background-image: var(--menu-gradient);
+        height: 8vh;
+        z-index: 10;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0 1vh;
+        box-sizing: border-box;
+    }
+    
+    .mobile .menu__list{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        height: inherit;
+    }
+    
+    .mobile .menu__item{
+        padding: 0;
+        cursor: pointer;
+        font-size: 90%;
+        font-weight: 400;
+        color: var(--menu-color);
+        width: 16.66%;
+    }
+    
+    .mobile .menu__list .menu__item{
+        width: 20%;
+    }
+    
+    .mobile .menu__div{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 180%;
+        margin-bottom: 1vh;
+    }
+    
+    .mobile svg{
+        width: 2.5vh;
+        height: 2.5vh;
+        display: block;
+    }
+    
+    .mobile path{
+        fill: var(--menu-color);
+    }
+    
+    .mobile .menu__name{
+        margin-left: 0;
+        text-transform: uppercase;
+        font-size: 70%;
+        text-align: center;
+    }
+    
+    .mobile .menu__item.active{
+        color: var(--menu-active);
+    }
+    
+    .mobile .menu__item.active path{
+        fill: var(--menu-active);
+    }
+    
+    .menu__footer{
+        display: none;
+    }
+    
+    .menu__close{
+        position: absolute;
+        top: 2.5vh;
+        right: 1.5vh;
+        font-size: 3vh;
+    }
+    
+    .menu__close svg{
+        width: 3vh;
+        height: 3vh;
+        display: block;
+    }
+    
+    .menu__close path{
+        fill: var(--font2);
+    }
+
+    .menu__subitem .menu__name{
+        margin-left: 3vh;
+        font-size: 80%;
+    }
+
+}

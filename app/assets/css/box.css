@@ -1,0 +1,981 @@
+@media (orientation: landscape) {
+    
+    .box{
+        display: none;
+        width: 50vh;
+        height: 100vh;
+        background-color: var(--background);
+        position: fixed;
+        right: -50vh;
+        top: 0;
+        transition: all 0.5s ease;
+        z-index: 9;
+    }
+
+    .box__background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--background);
+    }
+
+    .box__main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .box__title{
+        width: 100%;
+        height: 6vh;
+        background-color: var(--background2);
+        color: var(--color);
+        text-transform: uppercase;
+        padding: 0 1.5vh;
+        line-height: 6vh;
+        font-size: 90%;
+        font-weight: 700;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .box__body{
+        width: 100%;
+        height: calc(100vh - 6vh);
+        position: relative;
+        padding: 0.5vh;
+        box-sizing: border-box;
+    }
+
+    .box__div{
+        width: 100%;
+        min-height: calc(100vh - 11.5vh);
+        max-height: calc(100vh - 11.5vh);
+        box-sizing: border-box;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 0.5vh 1vh 0.5vh 0.5vh;
+        overflow-y: scroll;
+    }
+
+    .box__div2{
+        max-height: calc(100vh - 7vh);
+        min-height: calc(100vh - 7vh);
+    }
+
+    .box__div{
+        scrollbar-width: auto;
+        scrollbar-color: var(--font2) var(--background2);
+    }
+
+    .box__div::-webkit-scrollbar{
+        width: 4px;
+    }
+
+    .box__div::-webkit-scrollbar-track{
+        background: var(--background2);
+    }
+
+    .box__div::-webkit-scrollbar-thumb{
+        background-color: var(--font2);
+        border-radius: 10px;
+        border: 0px;
+    }
+
+    .box__div__100{
+        width: 100%;
+        padding: 0.5vh;
+        box-sizing: border-box;
+    }
+
+    .box__div__50{
+        width: 50%;
+        padding: 1vh;
+        box-sizing: border-box;
+    }
+
+    .box__name{
+        color: var(--font2);
+        font-size: 80%;
+        font-weight: 700;
+        padding-bottom: 0.5vh;
+    }
+
+    .box__name span{
+        color: red;
+        margin-left: 0.5vh;
+    }
+
+    .box__option{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 80%;
+        margin-bottom: 1vh;
+        margin-top: 0.5vh;
+    }
+
+    .box__option>div{
+        width: 2.4vh;
+        height: 2.4vh;
+        border: 1px solid var(--background2);
+        border-radius: 1.5vh;
+        background-color: var(--background);
+        box-sizing: border-box;
+        margin-right: 1vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box__option>div>div{
+        width: 1.5vh;
+        height: 1.5vh;
+        border-radius: 1vh;
+        background-color: var(--background2);
+    }
+
+    .box__option>div>div.active{
+        background-color: var(--font);
+    }
+
+    .box__option:hover{
+        color: var(--color);
+        cursor: pointer;
+    }
+
+    .box__option:hover>div>div{
+        background-color: var(--color);
+    }
+
+    .box__input{
+        width: 100%;
+    }
+
+    .box__input input, .box__input select, .box__input textarea{
+        width: 100%;
+        padding: 1vh;
+        border: none;
+        border-radius: 1vh;
+        background-color: var(--background);
+        box-sizing: border-box;
+        font-size: 80%;
+        color: var(--font);
+        outline: none;
+        border: 1px solid var(--background2);
+    }
+
+    .box__input textarea{
+        height: 20vh;
+        font-family: 'Nunito', sans-serif;
+    }
+
+    .box__input input::-webkit-input-placeholder, .box__input textarea::-webkit-input-placeholder{
+        color: var(--font2);
+        font-size: 70%;
+    }
+    
+    .box__input input:-ms-input-placeholder, .box__input textarea:-ms-input-placeholder{
+        color: var(--font2);
+        font-size: 70%;
+    }
+    
+    .box__input input::placeholder, .box__input textarea::placeholder{
+        color: var(--font2);
+        font-size: 70%;
+    }
+
+    .box__buttons{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--background2);
+    }
+
+    .box__buttons button.red{
+        background-color: var(--background2);
+        color: red;
+        padding: 1.5vh;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        font-size: 80%;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+
+    .box__buttons button.red:hover{
+        background-color: red;
+        color: white;
+        cursor: pointer;
+    }
+
+    .box__buttons button.red svg{
+        height: 1.6vh;
+        margin-right: 1vh;
+        display: block;
+        fill: red;
+    }
+
+    .box__buttons button.red:hover svg{
+        fill: white;
+    }
+
+    .box__buttons button.green{
+        background-color: var(--background2);
+        color: limegreen;
+        padding: 1.5vh;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        font-size: 80%;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+
+    .box__buttons button.green:hover{
+        background-color: limegreen;
+        color: white;
+        cursor: pointer;
+    }
+
+    .box__buttons button.green svg{
+        height: 1.6vh;
+        margin-right: 1vh;
+        display: block;
+        fill: limegreen;
+    }
+
+    .box__buttons button.green:hover svg{
+        fill: white;
+    }
+
+    .box__close{
+        position: absolute;
+        right: 1.5vh;
+        top: 1.5vh;
+        width: 3vh;
+        height: 3vh;
+        background-color: var(--background);
+        border-radius: 3vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box__close:hover{
+        background-color: var(--color);
+        cursor: pointer;
+    }
+
+    .box__close svg{
+        height: 1.6vh;
+        width: 1.6vh;
+        display: block;
+        fill: var(--font2);
+    }
+
+    .box__close:hover svg{
+        fill: white;
+    }
+
+    .box__search{
+        width: 100%;
+        padding: 0.5vh;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .box__search input{
+        width: 100%;
+        background-color: var(--background2);
+        border: none;
+        border-radius: 1vh;
+        padding: 1vh 3.5vh 1vh 1vh;
+        box-sizing: border-box;
+        outline: none;
+        font-size: 80%;
+        color: var(--font);
+    }
+
+    .box__search svg{
+        height: 2vh;
+        position: absolute;
+        right: 1.5vh;
+        top: 1.3vh;
+        fill: var(--font);
+    }
+
+    .box__search input::-webkit-input-placeholder{
+        color: var(--font2);
+    }
+    
+    .box__search input:-ms-input-placeholder{
+        color: var(--font2);
+    }
+    
+    .box__search input::placeholder{
+        color: var(--font2);
+    }
+
+    .box__list{
+        padding: 0 1vh;
+        border-radius: 1vh;
+        width: 100%;
+        border: 1px solid var(--background2);
+        font-size: 80%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 5vh;
+        position: relative;
+    }
+
+    .box__list:hover{
+        border: 1px solid var(--color);
+        color: var(--color);
+        cursor: pointer;
+    }
+
+    .box__list span{
+        margin-left: 1vh;
+        font-size: 70%;
+        color: var(--font2);
+        background-color: var(--background2);
+        padding: 0.3vh 0.8vh;
+        border-radius: 0.7vh;
+    }
+
+    .box__list:hover span{
+        background-color: var(--background);
+    }
+
+    .box__list svg{
+        width: 2vh;
+        height: 2vh;
+        margin-right: 0.5vh;
+        fill: var(--font);
+    }
+
+    .box__list.active{
+        background-color: var(--color);
+        border: 1px solid var(--color);
+        color: white;
+    }
+
+    .box__list.active svg{
+        fill: white;
+    }
+
+    .box__list__text{
+        font-size: 80%;
+        padding: 1vh 0;
+        color: var(--font2);
+    }
+
+    .box__color{
+        width: 4vh;
+        height: calc(5vh - 2px);
+        margin-right: 1vh;
+        border-radius: 1vh 0 0 1vh;
+        top: 0;
+        position: absolute;
+        left: 0;
+        box-sizing: border-box;
+    }
+
+    .box__alert{
+        display: none;
+        position: absolute;
+        width: 90%;
+        left: 5%;
+        height: 4vh;
+        top: calc(50% - 2vh);
+        text-align: center;
+        color: white;
+        background-color: red;
+        line-height: 4vh;
+        border-radius: 1vh;
+        font-size: 80%;
+    }
+
+    .box__grid{
+        width: calc(100% - 1vh);
+        margin: 0.5vh;
+        box-sizing: border-box;
+        display: grid;
+        border: 2px solid var(--background2);
+    }
+
+    .box__grid > .box__grid__input:last-child{
+        border-right: 0;
+    }
+
+    .box__grid__title{
+        font-size: 60%;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: var(--color);
+        border-right: 2px solid var(--background2);
+        padding: 1vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .box__grid__title svg{
+        width: 1vh;
+        height: 1vh;
+        margin-left: 0.5vh;
+        fill: var(--color);
+    }
+
+    .box__grid__name{
+        padding: 1vh;
+        box-sizing: border-box;
+        font-size: 80%;
+        font-weight: bold;
+        border-top: 2px solid var(--background2);
+        border-right: 2px solid var(--background2);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        line-height: 120%;
+    }
+
+    .box__grid__input{
+        box-sizing: border-box;
+        font-size: 80%;
+        font-weight: bold;
+        border-top: 2px solid var(--background2);
+        border-right: 2px solid var(--background2);
+    }
+
+    .box__grid__input input{
+        border: 0;
+        padding: 1vh;
+        box-sizing: border-box;
+        color: var(--font2);
+        outline: none;
+        background-color: var(--background3);
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .box__grid__input input[disabled]{
+        background-color: var(--background);
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .box__grid hr{
+        background-color: var(--background2);
+        height: 2px;
+        border: 0;
+        margin: 0;
+    }
+
+    .box__grid__image{
+        width: 4vh;
+        height: 4vh;
+        position: relative;
+        border-radius: 0.5vh;
+        border: 1px solid var(--background2);
+        box-sizing: border-box;
+        background-color: var(--background);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 1vh;
+    }
+
+    .box__grid__image img:nth-child(1){
+        height: inherit;
+        overflow: hidden;
+        object-fit: cover;
+        width: 100%;
+        opacity: 0.8;
+        filter: blur(5px);
+        transform: scale(1.1);
+    }
+
+    .box__grid__image img:nth-child(2){
+        height: 100%;
+        transform: scale(1);
+        transition: all 0.5s ease;
+        overflow: hidden;
+        object-fit: contain;
+        width: 100%;
+        z-index: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+}
+
+@media (orientation: portrait) {
+
+    .box{
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-color: var(--background);
+        position: fixed;
+        right: -100%;
+        top: 0;
+        transition: all 0.5s ease;
+        z-index: 20;
+    }
+    
+    .box__background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--background);
+    }
+    
+    .box__main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .box__title{
+        width: 100%;
+        height: 7vh;
+        background-color: var(--background2);
+        color: var(--color);
+        text-transform: uppercase;
+        padding: 0 1vh;
+        line-height: 7vh;
+        font-size: 100%;
+        font-weight: 700;
+        box-sizing: border-box;
+        position: relative;
+    }
+    
+    .box__body{
+        width: 100%;
+        height: calc(100vh - 7vh);
+        position: relative;
+        overflow: auto;
+    }
+    
+    .box__div{
+        width: 100%;
+        max-height: calc(100vh - 8vh);
+        padding: 0vh 0.5vh;
+        box-sizing: border-box;
+        margin: 0.5vh 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    
+    .box__div__100{
+        width: 100%;
+        padding: 0.5vh;
+        box-sizing: border-box;
+    }
+    
+    .box__div__50{
+        width: 50%;
+        padding: 0.5vh;
+        box-sizing: border-box;
+    }
+    
+    .box__name{
+        color: var(--font2);
+        font-size: 80%;
+        margin-bottom: 1vh;
+    }
+    
+    .box__input{
+        width: 100%;
+    }
+    
+    .box__input input, .box__input select, .box__input textarea{
+        width: 100%;
+        padding: 1.5vh;
+        border: none;
+        border-radius: 1vh;
+        background-color: var(--background);
+        box-sizing: border-box;
+        font-size: 100%;
+        color: var(--font);
+        outline: none;
+        border: 1px solid var(--background2);
+    }
+    
+    .box__input textarea{
+        height: 20vh;
+        font-family: 'Nunito Sans', sans-serif;
+    }
+    
+    .box__input input::-webkit-input-placeholder, .box__input textarea::-webkit-input-placeholder{
+        color: var(--font2);
+        font-size: 80%;
+    }
+    
+    .box__input input:-ms-input-placeholder, .box__input textarea:-ms-input-placeholder{
+        color: var(--font2);
+        font-size: 80%;
+    }
+    
+    .box__input input::placeholder, .box__input textarea::placeholder{
+        color: var(--font2);
+        font-size: 80%;
+    }
+    
+    .box__buttons{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--background2);
+    }
+
+    .box__buttons button.red{
+        background-color: var(--background2);
+        color: red;
+        padding: 1.5vh;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        font-size: 80%;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+
+    .box__buttons button.red:hover{
+        background-color: red;
+        color: white;
+        cursor: pointer;
+    }
+
+    .box__buttons button.red svg{
+        height: 1.6vh;
+        margin-right: 1vh;
+        display: block;
+        fill: red;
+    }
+
+    .box__buttons button.red:hover svg{
+        fill: white;
+    }
+
+    .box__buttons button.green{
+        background-color: var(--background2);
+        color: limegreen;
+        padding: 1.5vh;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        font-size: 80%;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+
+    .box__buttons button.green:hover{
+        background-color: limegreen;
+        color: white;
+        cursor: pointer;
+    }
+
+    .box__buttons button.green svg{
+        height: 1.6vh;
+        margin-right: 1vh;
+        display: block;
+        fill: limegreen;
+    }
+
+    .box__buttons button.green:hover svg{
+        fill: white;
+    }
+    
+    .box__close{
+        position: absolute;
+        right: 1vh;
+        top: 1.5vh;
+        width: 4vh;
+        height: 4vh;
+        background-color: var(--background);
+        border-radius: 3vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .box__close svg{
+        height: 2vh;
+        width: 2vh;
+        display: block;
+    }
+    
+    .box__close path{
+        fill: var(--font2);
+    }
+    
+    .box__search{
+        width: 100%;
+        padding: 0.5vh;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .box__search input{
+        width: 100%;
+        background-color: var(--background2);
+        border: none;
+        border-radius: 1vh;
+        padding: 1vh 3.5vh 1vh 1vh;
+        box-sizing: border-box;
+        outline: none;
+        font-size: 80%;
+        color: var(--font);
+    }
+
+    .box__search svg{
+        height: 2vh;
+        position: absolute;
+        right: 1.5vh;
+        top: 1.3vh;
+        fill: var(--font);
+    }
+
+    .box__search input::-webkit-input-placeholder{
+        color: var(--font2);
+    }
+    
+    .box__search input:-ms-input-placeholder{
+        color: var(--font2);
+    }
+    
+    .box__search input::placeholder{
+        color: var(--font2);
+    }
+
+    .box__list{
+        padding: 0 1vh;
+        border-radius: 1vh;
+        width: 100%;
+        border: 1px solid var(--background2);
+        font-size: 80%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 5vh;
+        position: relative;
+    }
+
+    .box__list:hover{
+        border: 1px solid var(--color);
+        color: var(--color);
+        cursor: pointer;
+    }
+
+    .box__list span{
+        margin-left: 1vh;
+        font-size: 70%;
+        color: var(--font2);
+        background-color: var(--background2);
+        padding: 0.3vh 0.8vh;
+        border-radius: 0.7vh;
+    }
+
+    .box__list:hover span{
+        background-color: var(--background);
+    }
+
+    .box__list svg{
+        width: 2vh;
+        height: 2vh;
+        margin-right: 0.5vh;
+        fill: var(--font);
+    }
+
+    .box__list.active{
+        background-color: var(--color);
+        border: 1px solid var(--color);
+        color: white;
+    }
+
+    .box__list.active svg{
+        fill: white;
+    }
+
+    .box__list__text{
+        font-size: 80%;
+        padding: 1vh 0;
+        color: var(--font2);
+    }
+    
+    .box__alert{
+        display: none;
+        position: absolute;
+        width: 90%;
+        left: 5%;
+        height: 4vh;
+        top: calc(50% - 2vh);
+        text-align: center;
+        color: white;
+        background-color: red;
+        line-height: 4vh;
+        border-radius: 1vh;
+        font-size: 80%;
+    }
+
+    .box__grid{
+        width: calc(100% - 1vh);
+        margin: 0.5vh;
+        box-sizing: border-box;
+        display: grid;
+        border: 2px solid var(--background2);
+    }
+
+    .box__grid > .box__grid__input:last-child{
+        border-right: 0;
+    }
+
+    .box__grid__title{
+        font-size: 60%;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: var(--color);
+        border-right: 2px solid var(--background2);
+        padding: 1vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .box__grid__title svg{
+        width: 1vh;
+        height: 1vh;
+        margin-left: 0.5vh;
+        fill: var(--color);
+    }
+
+    .box__grid__name{
+        padding: 1vh;
+        box-sizing: border-box;
+        font-size: 80%;
+        font-weight: bold;
+        border-top: 2px solid var(--background2);
+        border-right: 2px solid var(--background2);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        line-height: 120%;
+    }
+
+    .box__grid__input{
+        box-sizing: border-box;
+        font-size: 80%;
+        font-weight: bold;
+        border-top: 2px solid var(--background2);
+        border-right: 2px solid var(--background2);
+    }
+
+    .box__grid__input input{
+        border: 0;
+        padding: 1vh;
+        box-sizing: border-box;
+        color: var(--font2);
+        outline: none;
+        background-color: var(--background3);
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .box__grid__input input[disabled]{
+        background-color: var(--background);
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .box__grid hr{
+        background-color: var(--background2);
+        height: 2px;
+        border: 0;
+        margin: 0;
+    }
+
+    .box__grid__image{
+        width: 4vh;
+        height: 4vh;
+        position: relative;
+        border-radius: 0.5vh;
+        border: 1px solid var(--background2);
+        box-sizing: border-box;
+        background-color: var(--background);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 1vh;
+    }
+
+    .box__grid__image img:nth-child(1){
+        height: inherit;
+        overflow: hidden;
+        object-fit: cover;
+        width: 100%;
+        opacity: 0.8;
+        filter: blur(5px);
+        transform: scale(1.1);
+    }
+
+    .box__grid__image img:nth-child(2){
+        height: 100%;
+        transform: scale(1);
+        transition: all 0.5s ease;
+        overflow: hidden;
+        object-fit: contain;
+        width: 100%;
+        z-index: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+}

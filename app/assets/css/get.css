@@ -1,0 +1,1165 @@
+@media (orientation: landscape) {
+    
+    .list{
+        background-color: var(--background);
+        padding: 1vh 0.5vh;
+        box-sizing: border-box;
+        border-radius: 1vh;
+        margin: 1vh;
+        width: 100%;
+    }
+
+    .list__fields{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5vh 1vh 1.5vh 1vh;
+    }
+
+    .list__fields__item{
+        font-size: 70%;
+        text-transform: uppercase;
+        font-weight: 900;
+        color: var(--font);
+    }
+
+    .list__fields__item svg{
+        height: 1.2vh;
+        margin-left: 0.5vh;
+        margin-bottom: -0.1vh;
+        fill: var(--font);
+    }
+
+    .list__fields__item span:hover{
+        cursor: pointer;
+        color: var(--color);
+        fill: var(--color);
+    }
+
+    .list__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid var(--background2);
+        padding: 1.5vh 1vh;
+        background-color: var(--background);
+        border-radius: 0.5vh;
+    }
+
+    .list__item:hover{
+        background-color: var(--background2);
+        border-radius: 1vh;
+    }
+
+    .list__item:nth-last-child(2){
+        border-bottom: 1px solid var(--background2);
+    }
+
+    .list__item:nth-last-child(2):hover{
+        border-bottom: 1px solid var(--background);
+    }
+
+    .list__item:hover + .list__item{
+        border-top: 1px solid var(--background);
+    }
+
+    .list__status{
+        width: 1.5vh;
+        height: 2.5vh;
+        position: relative;
+    }
+
+    .list__status__sts{
+        position: absolute;
+        top: 0%;
+        left: 0vh;
+        height: 100% !important;
+        width: 1.5vh;
+        border-radius: 1vh;
+    }
+
+    .list__status__sts.green{
+        background-color: limegreen;
+    }
+
+    .list__status__sts.red{
+        background-color: red;
+    }
+
+    .list__status__sts.red div{
+        position: absolute;
+        width: 1.1vh;
+        height: 1.1vh;
+        top: 0.2vh;
+        left: 0.2vh;
+        background-color: var(--background);
+        border-radius: 2vh;
+    }
+
+    .list__status__sts.green div{
+        position: absolute;
+        width: 1.1vh;
+        height: 1.1vh;
+        bottom: 0.2vh;
+        left: 0.2vh;
+        background-color: var(--background);
+        border-radius: 2vh;
+    }
+
+    .list__status__sts:hover{
+        background-color: var(--font2);
+        cursor: pointer;
+    }
+
+    .list__status__sts.none:hover{
+        background-color: limegreen;
+        cursor: default;
+    }
+
+    .list__status__off .list__status__sts:hover{
+        cursor: default;
+    }
+
+    .list__sts{
+        width: 0.8vh;
+        height: 0.8vh;
+        margin-right: 1vh;
+        border-radius: 100%;
+    }
+
+    .list__color{
+        width: 2vh;
+        height: 1.5vh;
+        margin-right: 1vh;
+        border-radius: 0;
+        border: 1px solid var(--background2);
+    }
+
+    .list__check{
+        width: 2.5vh;
+        height: 2.5vh;
+        border: 1px solid var(--background2);
+        border-radius: 0.7vh;
+        background-color: var(--background);
+        line-height: 2.4vh;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .list__check svg{
+        height: 2.2vh;
+        width: 1.5vh;
+        fill: var(--background);
+    }
+
+    .list__check:hover{
+        border: 1px solid var(--font2);
+        cursor: pointer;
+        color: var(--font2);
+        fill: var(--font2);
+    }
+
+    .list__item:hover .list__check{
+        border: 1px solid var(--background);
+    }
+
+    .list__check.active{
+        color: white;
+        border: 1px solid var(--color);
+        background-color: var(--color);
+    }
+
+    .list__check.active path{
+        fill: white;
+    }
+
+    .list__item:hover .list__check.active{
+        border: 1px solid var(--color);
+    }
+
+    .list__check__off{
+        width: 2.5vh;
+        height: 2.5vh;
+        border: 1px solid var(--background2);
+        border-radius: 0.7vh;
+        background-color: var(--background2);
+        box-sizing: border-box;
+    }
+
+    .list__item:hover .list__check__off{
+        border: 1px solid var(--background);
+    }
+
+    .list__image, .list__mini{
+        width: 6vh;
+        height: 6vh;
+        position: relative;
+        border-radius: 0.5vh;
+        border: 1px solid var(--background2);
+        box-sizing: border-box;
+        background-color: var(--background);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .list__mini{
+        width: 4vh;
+        height: 4vh;
+        margin-right: 1vh;
+    }
+
+    .list__image img:nth-child(1), .list__mini img:nth-child(1){
+        height: inherit;
+        overflow: hidden;
+        object-fit: cover;
+        width: 100%;
+        opacity: 0.8;
+        filter: blur(5px);
+        transform: scale(1.1);
+    }
+
+    .list__image img:nth-child(2), .list__mini img:nth-child(2){
+        height: 100%;
+        transform: scale(1);
+        transition: all 0.5s ease;
+        overflow: hidden;
+        object-fit: contain;
+        width: 100%;
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .list__item:hover .list__image, .list__mini:hover .list__mini{
+        border: 1px solid var(--background);
+    }
+
+    .list__image svg, .list__mini svg{
+        height: 5.6vh;
+        width: 2vh;
+        display: block;
+    }
+
+    .list__image path, .list__mini path{
+        fill: var(--font2);
+    }
+
+    .list__flex{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .list__actions{
+        font-size: 90%;
+        background-color: var(--background2);
+        border-radius: 2vh;
+        width: 2.5vh;
+        height: 2.5vh;
+        text-align: center;
+        line-height: 2.6vh;
+        position: relative;
+    }
+
+    .list__item:hover .list__actions{
+        background-color: var(--background);
+    }
+
+    .list__actions[option="delete"]{
+        background-color: red !important;
+    }
+
+    .list__actions[option="edit"]{
+        background-color: royalblue !important;
+    }
+
+    .list__actions[option="up"]{
+        background-color: var(--font2) !important;
+    }
+
+    .list__actions[option="down"]{
+        background-color: var(--font2) !important;
+    }
+
+    .list__actions[option="delete"]:hover{
+        background-color: var(--background) !important;
+        cursor: pointer;
+    }
+
+    .list__actions[option="edit"]:hover{
+        background-color: var(--background) !important;
+        cursor: pointer;
+    }
+
+    .list__actions[option="up"]:hover{
+        background-color: var(--background) !important;
+        cursor: pointer;
+    }
+
+    .list__actions[option="down"]:hover{
+        background-color: var(--background) !important;
+        cursor: pointer;
+    }
+
+    .list__actions svg{
+        height: 2.5vh;
+        width: 1.2vh;
+        fill: white;
+    }
+
+    .list__actions:hover svg{
+        fill: white;
+    }
+
+    .list__actions[option="delete"]:hover svg{
+        fill: red;
+    }
+
+    .list__actions[option="edit"]:hover svg{
+        fill: royalblue;
+    }
+
+    .list__actions[option="up"]:hover svg{
+        fill: var(--font2);
+    }
+
+    .list__actions[option="down"]:hover svg{
+        fill: var(--font2);
+    }
+
+    .list__actions:hover .tip, .list__status:hover .tip{
+        display: block;
+    }
+
+    .list__actions__none{
+        background-color: var(--background2);
+        border-radius: 2vh;
+        width: 2.5vh;
+        height: 2.5vh;
+    }
+
+    .list__actions__none.fields{
+        background-color: var(--background);
+    }
+
+    .list__item:hover .list__actions__none.fields{
+        background-color: var(--background2);
+    }
+
+    .list__title{
+        color: var(--font);
+        font-size: 90%;
+        font-weight: 700;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 1.8vh;
+    }
+
+    .list__title svg{
+        height: 1.2vh;
+        margin-left: 0.5vh;
+    }
+
+    .list__title path{
+        fill: var(--background);
+    }
+
+    .list__item:hover .list__title path{
+        fill: var(--background2);
+    }
+
+    .list__title span[onclick]:hover{
+        color: var(--color);
+        cursor: pointer;
+    }
+
+    .list__title span[onclick]:hover path{
+        fill: var(--color) !important;
+    }
+
+    .list__text{
+        color: var(--font2);
+        font-size: 70%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 1.8vh;
+    }
+
+    .list__text>div{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .list__text div[onclick]:hover,.list__text span[onclick]:hover, .list__text div[onclick]:hover span, .list__text div[onclick]:hover p{
+        color: var(--color);
+        cursor: pointer;
+    }
+
+    .list__text.red{
+        color: red;
+    }
+
+    .list__text br{
+        height: 0.3vh;
+        display: block;
+        content: "";
+    }
+
+    .list__text div span{
+        color: var(--font2);
+        font-size: 80%;
+    }
+
+    .list__text div p{
+        color: var(--font2);
+        line-height: 120%;
+    }
+
+    .list__item div .list__title + div, .list__item div .list__text + div{
+        margin-top: 0.3vh;
+    }
+
+    .list__pages{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5vh 1vh 0.5vh 1vh;
+    }
+
+    .list__pages__result{
+        color: var(--font2);
+        font-size: 80%;
+    }
+
+    .list__pages__list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .list__pages__item{
+        padding: 1vh 1.5vh;
+        color: var(--font);
+        background-color: var(--background2);
+        border-radius: 0.7vh;
+        margin-left: 0.5vh;
+        font-size: 80%;
+        text-transform: uppercase;
+    }
+
+    .list__pages__item:hover{
+        cursor: pointer;
+        color: var(--color);
+    }
+
+    .list__pages__item.active{
+        color: white;
+        background-color: var(--color);
+        cursor: default;
+    }
+
+    .list__alert{
+        position: relative;
+        padding: 2vh 1vh;
+        display: none;
+        border-top: 1px solid var(--background2);
+    }
+
+    .list__alert__background{
+        position: absolute;
+        top: 1vh;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 2vh);
+        background-color: var(--color);
+        opacity: 0.1;
+        border-radius: 1vh;
+    }
+
+    .list__alert__text{
+        color: var(--color);
+        font-size: 80%;
+    }
+
+    .list__none{
+        padding: 0.5vh 1vh;
+        font-size: 80%;
+        color: var(--font2);
+    }
+
+    .none{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 12vh);
+        width: 100%;
+    }
+
+    .none__info{
+        width: 40%;
+    }
+
+    .none__title{
+        font-size: 250%;
+        color: var(--font);
+        font-weight: 900;
+    }
+
+    .none__text{
+        font-size: 120%;
+        line-height: 150%;
+        margin-top: 2vh;
+        color: var(--font2);
+    }
+
+    .none__image{
+        background-image: var(--none);
+        width: 50%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        filter: grayscale(1);
+        opacity: 0.5;
+    }
+
+    .none__button{
+        margin-top: 3vh;
+    }
+
+    .none__button button{
+        padding: 1.5vh 2vh;
+        background-color: var(--color);
+        color: white;
+        border-radius: 1vh;
+        text-transform: uppercase;
+        font-weight: 700;
+        border: none;
+        outline: none;
+        box-sizing: border-box;
+        font-size: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .none__button button:hover{
+        background-color: var(--background);
+        color: var(--color);
+        cursor: pointer;
+    }
+
+    .none__button button svg{
+        margin-right: 0.5vh;
+        width: 2vh;
+        height: 2vh;
+        fill: white;
+    }
+
+    .none__button button:hover svg{
+        fill: var(--color);
+    }
+
+}
+
+@media (orientation: portrait) {
+
+    .list{
+        background-color: var(--background);
+        padding: 1vh 0.5vh;
+        box-sizing: border-box;
+        border-radius: 1vh;
+        width: 100%;
+        margin-bottom: 6vh;
+    }
+
+    .list__fields{
+        display: none;
+    }
+
+    .list__fields__item{
+        font-size: 70%;
+        text-transform: uppercase;
+        font-weight: 900;
+        color: var(--font);
+    }
+
+    .list__fields__item svg{
+        height: 1.2vh;
+        margin-left: 0.5vh;
+        margin-bottom: -0.1vh;
+        fill: var(--font);
+    }
+
+    .list__fields__item span:hover{
+        cursor: pointer;
+        color: var(--color);
+        fill: var(--color);
+    }
+
+    .list__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid var(--background2);
+        padding: 1.5vh 1vh;
+        background-color: var(--background);
+        border-radius: 0.5vh;
+    }
+
+    .list__item:nth-last-child(2){
+        border-bottom: 1px solid var(--background2);
+    }
+
+    .list__item:nth-last-child(2):hover{
+        border-bottom: 1px solid var(--background);
+    }
+
+    .list__item:hover + .list__item{
+        border-top: 1px solid var(--background);
+    }
+
+    .list__status{
+        width: 1.5vh;
+        height: 2.5vh;
+        position: relative;
+        order: 2;
+    }
+
+    .list__status__sts{
+        position: absolute;
+        top: 0%;
+        left: 0vh;
+        height: 100% !important;
+        width: 1.5vh;
+        border-radius: 1vh;
+    }
+
+    .list__status__sts.green{
+        background-color: limegreen;
+    }
+
+    .list__status__sts.red{
+        background-color: red;
+    }
+
+    .list__status__sts.red div{
+        position: absolute;
+        width: 1.1vh;
+        height: 1.1vh;
+        top: 0.2vh;
+        left: 0.2vh;
+        background-color: var(--background);
+        border-radius: 2vh;
+    }
+
+    .list__status__sts.green div{
+        position: absolute;
+        width: 1.1vh;
+        height: 1.1vh;
+        bottom: 0.2vh;
+        left: 0.2vh;
+        background-color: var(--background);
+        border-radius: 2vh;
+    }
+
+    .list__status__sts:hover{
+        background-color: var(--font2);
+        cursor: pointer;
+    }
+
+    .list__status__sts.none:hover{
+        background-color: limegreen;
+        cursor: default;
+    }
+
+    .list__status__off .list__status__sts:hover{
+        cursor: default;
+    }
+
+    .list__sts{
+        width: 0.8vh;
+        height: 0.8vh;
+        margin-right: 1vh;
+        border-radius: 100%;
+    }
+
+    .list__color{
+        width: 2vh;
+        height: 1.5vh;
+        margin-right: 1vh;
+        border-radius: 0;
+        border: 1px solid var(--background2);
+    }
+
+    .list__check{
+        width: 2.5vh;
+        height: 2.5vh;
+        border: 1px solid var(--background2);
+        border-radius: 0.7vh;
+        background-color: var(--background);
+        line-height: 2.4vh;
+        text-align: center;
+        box-sizing: border-box;
+        order: 1;
+    }
+
+    .list__check svg{
+        height: 2.2vh;
+        width: 1.5vh;
+        fill: var(--background);
+    }
+
+    .list__check:hover{
+        border: 1px solid var(--font2);
+        cursor: pointer;
+        color: var(--font2);
+        fill: var(--font2);
+    }
+
+    .list__item:hover .list__check{
+        border: 1px solid var(--background);
+    }
+
+    .list__check.active{
+        color: white;
+        border: 1px solid var(--color);
+        background-color: var(--color);
+    }
+
+    .list__check.active path{
+        fill: white;
+    }
+
+    .list__item:hover .list__check.active{
+        border: 1px solid var(--color);
+    }
+
+    .list__check__off{
+        width: 2.5vh;
+        height: 2.5vh;
+        border: 1px solid var(--background2);
+        border-radius: 0.7vh;
+        background-color: var(--background2);
+        box-sizing: border-box;
+    }
+
+    .list__item:hover .list__check__off{
+        border: 1px solid var(--background);
+    }
+
+    .list__image, .list__mini{
+        width: 6vh;
+        height: 6vh;
+        position: relative;
+        border-radius: 1vh;
+        border: 1px solid var(--background2);
+        box-sizing: border-box;
+        background-color: var(--background);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        order: 3;
+    }
+
+    .list__mini{
+        width: 4vh;
+        height: 4vh;
+        margin-right: 1vh;
+    }
+
+    .list__image img:nth-child(1), .list__mini img:nth-child(1){
+        height: inherit;
+        overflow: hidden;
+        object-fit: cover;
+        width: 100%;
+        opacity: 0.8;
+        filter: blur(5px);
+        transform: scale(1.1);
+    }
+
+    .list__image img:nth-child(2), .list__mini img:nth-child(2){
+        height: 100%;
+        transform: scale(1);
+        transition: all 0.5s ease;
+        overflow: hidden;
+        object-fit: contain;
+        width: 100%;
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .list__item:hover .list__image, .list__mini:hover .list__mini{
+        border: 1px solid var(--background);
+    }
+
+    .list__image svg, .list__mini svg{
+        height: 5.6vh;
+        width: 2vh;
+        display: block;
+    }
+
+    .list__image path, .list__mini path{
+        fill: var(--font2);
+    }
+
+    .list__flex{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .list__actions{
+        font-size: 90%;
+        background-color: var(--background2);
+        border-radius: 1vh;
+        width: 2.5vh;
+        height: 2.5vh;
+        text-align: center;
+        line-height: 2.6vh;
+        position: relative;
+    }
+
+    .list__item:hover .list__actions{
+        background-color: var(--background);
+    }
+
+    .list__actions[option="delete"]{
+        background-color: red !important;
+    }
+
+    .list__actions[option="edit"]{
+        background-color: royalblue !important;
+    }
+
+    .list__actions[option="up"]{
+        background-color: var(--font2) !important;
+    }
+
+    .list__actions[option="down"]{
+        background-color: var(--font2) !important;
+    }
+
+    .list__actions[option="delete"]:hover{
+        background-color: var(--background) !important;
+        cursor: pointer;
+    }
+
+    .list__actions[option="edit"]:hover{
+        background-color: var(--background) !important;
+        cursor: pointer;
+    }
+
+    .list__actions[option="up"]:hover{
+        background-color: var(--background) !important;
+        cursor: pointer;
+    }
+
+    .list__actions[option="down"]:hover{
+        background-color: var(--background) !important;
+        cursor: pointer;
+    }
+
+    .list__actions svg{
+        height: 2.5vh;
+        width: 1.2vh;
+        fill: white;
+    }
+
+    .list__actions:hover svg{
+        fill: white;
+    }
+
+    .list__actions[option="delete"]:hover svg{
+        fill: red;
+    }
+
+    .list__actions[option="edit"]:hover svg{
+        fill: royalblue;
+    }
+
+    .list__actions[option="up"]:hover svg{
+        fill: var(--font2);
+    }
+
+    .list__actions[option="down"]:hover svg{
+        fill: var(--font2);
+    }
+
+    .list__actions:hover .tip, .list__status:hover .tip{
+        display: block;
+    }
+
+    .list__actions__none{
+        background-color: var(--background2);
+        border-radius: 2vh;
+        width: 2.5vh;
+        height: 2.5vh;
+    }
+
+    .list__actions__none.fields{
+        background-color: var(--background);
+    }
+
+    .list__item:hover .list__actions__none.fields{
+        background-color: var(--background2);
+    }
+
+    .list__title{
+        color: var(--font);
+        font-size: 90%;
+        font-weight: 700;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 1.8vh;
+    }
+
+    .list__title svg{
+        height: 1.2vh;
+        margin-left: 0.5vh;
+    }
+
+    .list__title path{
+        fill: var(--background);
+    }
+
+    .list__item:hover .list__title path{
+        fill: var(--background2);
+    }
+
+    .list__title span[onclick]:hover{
+        color: var(--color);
+        cursor: pointer;
+    }
+
+    .list__title span[onclick]:hover path{
+        fill: var(--color) !important;
+    }
+
+    .list__text{
+        color: var(--font2);
+        font-size: 70%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 1.8vh;
+    }
+
+    .list__text>div{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .list__text div[onclick]:hover,.list__text span[onclick]:hover, .list__text div[onclick]:hover span, .list__text div[onclick]:hover p{
+        color: var(--color);
+        cursor: pointer;
+    }
+
+    .list__text.red{
+        color: red;
+    }
+
+    .list__text br{
+        height: 0.3vh;
+        display: block;
+        content: "";
+    }
+
+    .list__text div span{
+        color: var(--font2);
+        font-size: 80%;
+    }
+
+    .list__text div p{
+        color: var(--font2);
+        line-height: 120%;
+    }
+
+    .list__item div .list__title + div, .list__item div .list__text + div{
+        margin-top: 0.3vh;
+    }
+
+    .list__pages{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5vh 1vh 0.5vh 1vh;
+    }
+
+    .list__pages__result{
+        color: var(--font2);
+        font-size: 80%;
+    }
+
+    .list__pages__list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .list__pages__item{
+        padding: 1vh 1.5vh;
+        color: var(--font);
+        background-color: var(--background2);
+        border-radius: 0.7vh;
+        margin-left: 0.5vh;
+        font-size: 80%;
+        text-transform: uppercase;
+    }
+
+    .list__pages__item:hover{
+        cursor: pointer;
+        color: var(--color);
+    }
+
+    .list__pages__item.active{
+        color: white;
+        background-color: var(--color);
+        cursor: default;
+    }
+
+    .list__alert{
+        position: relative;
+        padding: 2vh 1vh;
+        display: none;
+        border-top: 1px solid var(--background2);
+    }
+
+    .list__alert__background{
+        position: absolute;
+        top: 1vh;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 2vh);
+        background-color: var(--color);
+        opacity: 0.1;
+        border-radius: 1vh;
+    }
+
+    .list__alert__text{
+        color: var(--color);
+        font-size: 80%;
+    }
+
+    .list__none{
+        padding: 0.5vh 1vh;
+        font-size: 80%;
+        color: var(--font2);
+    }
+
+    .none{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 17vh);
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .none__info{
+        width: 100%;
+        order: 2;
+        margin-top: 5vh;
+    }
+
+    .none__title{
+        font-size: 150%;
+        color: var(--font);
+        font-weight: 900;
+        text-align: center;
+    }
+
+    .none__text{
+        font-size: 100%;
+        line-height: 150%;
+        margin-top: 1vh;
+        color: var(--font2);
+        text-align: center;
+    }
+
+    .none__image{
+        background-image: var(--none);
+        width: 100%;
+        height: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        filter: grayscale(1);
+        opacity: 0.5;
+        order: 1;
+    }
+
+    .none__button{
+        margin-top: 2vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .none__button button{
+        padding: 1vh 2vh;
+        background-color: var(--color);
+        color: white;
+        border-radius: 1vh;
+        text-transform: uppercase;
+        font-weight: 700;
+        border: none;
+        outline: none;
+        box-sizing: border-box;
+        font-size: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .none__button button:hover{
+        background-color: var(--background);
+        color: var(--color);
+        cursor: pointer;
+    }
+
+    .none__button button svg{
+        margin-right: 0.5vh;
+        width: 2vh;
+        height: 2vh;
+        fill: white;
+    }
+
+    .none__button button:hover svg{
+        fill: var(--color);
+    }
+
+    .list__info{
+        order: 4;
+    }
+
+    .list__rank{
+        order: 5;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        height: 6vh;
+    }
+
+    .list__buttons{
+        order: 6;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        height: 6vh;
+    }
+
+}

@@ -1,0 +1,212 @@
+@media (orientation: landscape) {
+    
+    .alert{
+        display: none;
+        width: 50vh;
+        background-color: var(--background);
+        position: fixed;
+        left: calc(50% - 25vh);
+        box-sizing: border-box;
+        border-radius: 1vh;
+        z-index: 9;
+    }
+
+    .alert__title{
+        font-size: 90%;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+        margin-bottom: 1.5vh;
+        background-color: var(--color);
+        padding: 2vh;
+        border-radius: 1vh 1vh 0 0;
+    }
+
+    .alert__title.green{
+        background-color: limegreen;
+    }
+
+    .alert__title.red{
+        background-color: red;
+    }
+
+    .alert__text{
+        font-size: 80%;
+        color: var(--font2);
+        text-align: center;
+        padding: 0.5vh 2vh;
+        box-sizing: border-box;
+    }
+
+    .alert__text.bold{
+        color: var(--font);
+        font-weight: 700;
+    }
+
+    .alert__text span{
+        color: red;
+        text-transform: uppercase;
+    }
+
+    .alert__button{
+        margin: 1.5vh 2vh 2vh 2vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .alert__button button{
+        color: white;
+        padding: 1vh 1.5vh;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        border-radius: 1vh;
+        margin: 0 0.5vh;
+        font-size: 80%;
+        text-transform: uppercase;
+        font-weight: 700;
+        background-color: var(--font2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .alert__button button svg{
+        height: 1.6vh;
+        margin-right: 1vh;
+        display: block;
+        fill: white;
+    }
+
+    .alert__button button.red{
+        background-color: red;
+    }
+
+    .alert__button button.green{
+        background-color: limegreen;
+    }
+
+    .alert__button button:hover{
+        background-color: var(--background2);
+        color: var(--font2);
+        cursor: pointer;
+    }
+
+    .alert__button button:hover svg{
+        fill: var(--font2);
+    }
+
+    .alert__button button.red:hover{
+        color: red;
+    }
+
+    .alert__button button.red:hover svg{
+        fill: red;
+    }
+
+    .alert__button button.green:hover{
+        color: limegreen;
+    }
+
+    .alert__button button.green:hover svg{
+        fill: limegreen;
+    }
+
+}
+
+@media (orientation: portrait) {
+
+    .alert{
+        display: none;
+        width: 90%;
+        background-color: var(--background);
+        position: fixed;
+        left: 5%;
+        box-sizing: border-box;
+        border-radius: 1vh;
+        z-index: 99;
+    }
+    
+    .alert__title{
+        font-size: 100%;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+        margin-bottom: 1.5vh;
+        background-color: var(--color);
+        padding: 2vh;
+        border-radius: 1vh 1vh 0 0;
+    }
+    
+    .alert__title.green{
+        background-color: limegreen;
+    }
+    
+    .alert__title.red{
+        background-color: red;
+    }
+    
+    .alert__text{
+        font-size: 80%;
+        color: var(--font2);
+        text-align: center;
+        padding: 0.5vh 2vh;
+        box-sizing: border-box;
+    }
+    
+    .alert__text.bold{
+        color: var(--font);
+        font-weight: 700;
+    }
+    
+    .alert__text span{
+        color: red;
+        text-transform: uppercase;
+    }
+    
+    .alert__button{
+        margin: 1.5vh 2vh 2vh 2vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .alert__button button{
+        color: white;
+        padding: 1vh 1.5vh;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        border-radius: 1vh;
+        margin: 0 0.5vh;
+        font-size: 80%;
+        text-transform: uppercase;
+        font-weight: 700;
+        background-color: var(--font2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .alert__button button svg{
+        height: 2vh;
+        margin-right: 1vh;
+        display: block;
+    }
+    
+    .alert__button button path{
+        fill: white;
+    }
+    
+    .alert__button button.red{
+        background-color: red;
+    }
+    
+    .alert__button button.green{
+        background-color: limegreen;
+    }
+
+}

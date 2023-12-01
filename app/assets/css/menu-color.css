@@ -1,0 +1,13 @@
+:root{
+    --menu-background:var(--color);
+    --menu-color:rgba(255,255,255,0.75);
+    --menu-hover:rgba(255,255,255,0.9);
+    --menu-active:white;
+    --menu-scroll:rgba(255,255,255,0.4);
+    --menu-footer:rgba(0,0,0,0.2); 
+    --menu-scroll-bar:var(--color);
+    --menu-alert-color:red;
+    --menu-alert-background:white;
+    --menu-bar:white;
+    --logo-filter:brightness(0) invert(1);
+}
