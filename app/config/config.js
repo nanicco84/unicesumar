@@ -97,10 +97,6 @@ class Menu{
                         name: 'Usuários',
                         link: 'get([\'Users\'])'
                     },
-                    /*Configuration: {
-                        name: 'Configuração',
-                        link: `set(['Configuration'],'${Cookies.get('auth') ? JSON.parse(Cookies.get('auth')).account : ''}')`
-                    }*/
                 }
             },
             Logout: {
