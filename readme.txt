@@ -1,3 +1,5 @@
+Projeto academico TCC2 para Unicesumar
+
 APP
 Essa pasta contém os arquivos da parte do frontend do sistema de cobranças, feito em HTML / JavaScript / CSS.
 Dentro em assets, tem os dados base do sistema, como arquivos de estilização (CSS), os arquivos Javascript, que fazem as funcionalidades de listagem, edição de dados, uploads de imagens, etc.
