@@ -188,17 +188,6 @@ $app->group('/layout',function() use ($app){
     });
 });
 
-//configuration
-$app->group('/configuration',function() use ($app){
-    require 'routes/configuration.php';
-    $app->get('/{id}',function(Request $req, Response $res, $args){
-        return getConfigurationId($req,$res,$args);
-    });
-    $app->put('/{id}',function(Request $req, Response $res, $args){
-        return putConfiguration($req,$res,$args);
-    });
-});
-
 //users
 $app->group('/users',function() use ($app){
     require 'routes/users.php';
