@@ -258,14 +258,6 @@ $app->group('/callback',function() use ($app){
     });
 });
 
-//address
-/*$app->group('/address',function() use ($app){
-    require 'routes/address.php';
-    $app->get('',function(Request $req, Response $res, $args){
-        return address($req,$res,$args);
-    });
-});*/
-
 //error
 $app->map(['GET','POST','PUT','DELETE'],'/',function(Request $request, Response $response, $args){
     $response->getBody()->write(json_encode(array('message'=>'Rota inválida','sts'=>404)));
