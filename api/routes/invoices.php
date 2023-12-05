@@ -118,8 +118,8 @@ function getInvoicesId($req,$res,$args){
             (CASE WHEN a.type='auto' THEN 'Automático' ELSE 'Manual' END) AS type,
             (CASE WHEN a.subscription='' THEN 'Nenhuma' ELSE a.subscription END) AS subscription,
             (CASE WHEN a.transaction='' THEN 'Não informado' ELSE a.transaction END) AS transaction,
-            (CASE WHEN a.payment->>'$.pixcode' IS NULL OR a.payment->>'$.pixcode'='' THEN 'Não informado' ELSE a.payment->>'$.pixcode' END) AS pixcode,
-            (CASE WHEN a.payment->>'$.barcode' IS NULL OR a.payment->>'$.barcode' THEN 'Não informado' ELSE a.payment->>'$.barcode' END) AS barcode,
+            (CASE WHEN a.details->>'$.qrcode' IS NULL OR a.details->>'$.qrcode'='' THEN 'Não informado' ELSE a.details->>'$.qrcode' END) AS pixcode,
+            (CASE WHEN a.details->>'$.barcode' IS NULL OR a.details->>'$.barcode'='' THEN 'Não informado' ELSE a.details->>'$.barcode' END) AS barcode,
             a.customer->>'$.name' AS name,
             a.customer->>'$.id' AS customer,
             a.payment->>'$.id' AS payment,
@@ -178,6 +178,9 @@ function postInvoices($req,$res,$args){
             if($req->getParam('due_date')<date('Y-m-d')){
                 $res->getBody()->write(json_encode(array('sts'=>400,'message'=>'Vencimento não pode ser menor que a data de amanhã')));
             }else{
+                $banco = db();
+                $pdo = new PDO('mysql:host='.$banco['host'].';dbname='.$banco['name'].'',$banco['user'],$banco['password']);
+                $pdo->exec("SET time_zone='+03:00'");
                 $id = id();
                 $total = 0;
                 if(is_array($req->getParam('services'))){
@@ -233,7 +236,7 @@ function postInvoices($req,$res,$args){
                         "status"=>$req->getParam('status'),
                         "type"=>'manual',
                         "send"=>$req->getParam('send'),
-                        "transaction"=>'',
+                        "transaction"=>$charge->data->charge_id,
                         "details"=>'{"barcode":"'.($charge->data->barcode?$charge->data->barcode:'').'","pdf":"https://pdf.paggy.com.br/'.$id.'","qrcode":"'.($charge->data->pix->qrcode?$charge->data->pix->qrcode:'').'","qrcode_image":"'.($charge->data->pix->qrcode_image?$charge->data->pix->qrcode_image:'').'"}',
                         "payment"=>'{"id":"'.$req->getParam('payment').'","app":"'.$payment['app'].'","service":"'.$payment['service'].'","name":"'.$payment['name'].'"}',
                         "services"=>$services,
@@ -261,12 +264,25 @@ function postInvoices($req,$res,$args){
                         "note"=>''
                     ));
                 }
-                
-
-                //enviar email
-
                 //results
-                $res->getBody()->write(json_encode(array('sts'=>200,'message'=>'Registro adicionado','id'=>$id)));
+                $res->getBody()->write(json_encode(array('sts'=>200,'message'=>'Registro adicionado','id'=>array(
+                    "id"=>$id,
+                    "account"=>$req->getParam('account'),
+                    "subscription"=>'',
+                    "customer"=>'{"id":"'.$req->getParam('customer').'","name":"'.$customer['name'].'"}',
+                    "due_date"=>$req->getParam('due_date'),
+                    "total"=>$total,
+                    "status"=>$req->getParam('status'),
+                    "type"=>'manual',
+                    "send"=>$req->getParam('send'),
+                    "transaction"=>'',
+                    "details"=>'{"barcode":"'.($charge->data->barcode?$charge->data->barcode:'').'","pdf":"https://pdf.paggy.com.br/'.$id.'","qrcode":"'.($charge->data->pix->qrcode?$charge->data->pix->qrcode:'').'","qrcode_image":"'.($charge->data->pix->qrcode_image?$charge->data->pix->qrcode_image:'').'"}',
+                    "payment"=>'{"id":"'.$req->getParam('payment').'","app":"'.$payment['app'].'","service":"'.$payment['service'].'","name":"'.$payment['name'].'"}',
+                    "services"=>$services,
+                    "period"=>'',
+                    "payday"=>$payday,
+                    "note"=>''
+                ))));
             }
         }catch(Exception $e){
             $res->getBody()->write(json_encode(array('sts'=>400,'message'=>'Operação inválida')));
