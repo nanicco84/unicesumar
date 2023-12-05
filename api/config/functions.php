@@ -66,9 +66,9 @@ function createInvoice($data){
             {"date":"'.$data['due_date'].'","days":"0","send":"off","method":"email"},
             {"date":"'.date('Y-m-d',strtotime($data['due_date'].'+2 day')).'","days":"2","send":"off","method":"email"},
             {"date":"'.date('Y-m-d',strtotime($data['due_date'].'+7 day')).'","days":"7","send":"off","method":"email"},
-            {"date":"'.date('Y-m-d',strtotime($data['due_date'].'+15 day')).'","days":"15","send":"off","method":"email"}
-            {"date":"'.date('Y-m-d',strtotime($data['due_date'].'+20 day')).'","days":"20","send":"off","method":"email"}
-            {"date":"'.date('Y-m-d',strtotime($data['due_date'].'+25 day')).'","days":"25","send":"off","method":"email"}
+            {"date":"'.date('Y-m-d',strtotime($data['due_date'].'+15 day')).'","days":"15","send":"off","method":"email"},
+            {"date":"'.date('Y-m-d',strtotime($data['due_date'].'+20 day')).'","days":"20","send":"off","method":"email"},
+            {"date":"'.date('Y-m-d',strtotime($data['due_date'].'+25 day')).'","days":"25","send":"off","method":"email"},
             {"date":"'.date('Y-m-d',strtotime($data['due_date'].'+30 day')).'","days":"30","send":"off","method":"email"}
         ]';
     }else{
@@ -77,7 +77,7 @@ function createInvoice($data){
     $banco = db();
     $pdo = new PDO('mysql:host='.$banco['host'].';dbname='.$banco['name'].'',$banco['user'],$banco['password']);
     $pdo->exec("SET time_zone='+03:00'");
-    $stmt = $pdo->prepare("INSERT INTO invoices (id,account,date,customer,subscription,due_date,payment,total,status,transaction,notifications,details,type,payday,services,note) VALUES (:id,:account,:date,:customer,:subscription,:due_date,:payment,:total,:status,:transaction,:notifications,:details,:type,:payday,:services,:note)");
+    $stmt = $pdo->prepare("INSERT INTO invoices (id,account,date,customer,subscription,services,due_date,payment,total,status,transaction,notifications,details,type,payday,note) VALUES (:id,:account,:date,:customer,:subscription,:services,:due_date,:payment,:total,:status,:transaction,:notifications,:details,:type,:payday,:note)");
     $stmt->bindValue(':id',$data['id'],PDO::PARAM_STR);
     $stmt->bindValue(':account',$data['account'],PDO::PARAM_STR);
     $stmt->bindValue(':date',date('Y-m-d H:i:s'),PDO::PARAM_STR);
